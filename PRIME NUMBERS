@@ -1,0 +1,27 @@
+PrimeNumbers.java
+import java.util.Scanner;
+class PrimeNumbers
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        for (int num = 2; num <= N; num++) 
+        {
+            boolean isPrime = true;
+             // Check if num is prime
+            for (int I = 2; I * I <= num; i++) //to reduce number of iterations and to save time
+            {
+                if (num % I == 0) 
+                {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if (isPrime) 
+            {
+                System.out.print(num + “ “);
+            }
+        }
+    }
+}
